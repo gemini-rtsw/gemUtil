@@ -17,14 +17,19 @@ DEPSCHS = $(wildcard ../*.sch)
 
 # Add target .db files below here. Each must
 # correspond to a .sch file
-# DB += xxx.db
+DB += hb2health.db
 
 # If .sym files are in this support module,
 # simply install them into <top>/db.
-# DB += $(wildcard ../*.sym)
+TEMPLATES_DIR = schematics
+TEMPLATES += hb2health.sch
+TEMPLATES += hb2health.sym
 
 
 include $(TOP)/configure/RULES
 #----------------------------------------
 #  ADD RULES AFTER THIS LINE
-
+#
+#
+clean:: 
+	$(RM) *.bak *.dat

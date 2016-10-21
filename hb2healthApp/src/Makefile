@@ -7,23 +7,16 @@ include $(TOP)/configure/CONFIG
 #=============================
 # Build a support module called <APPNAME>
 
-LIBRARY_IOC += gemUtil
+LIBRARY_IOC += hb2health
 
 # <APPNAME>.dbd will be created and installed
-DBD += gemUtil.dbd
-
-# gemUtil.dbd will be made up from these files:
-gemUtil_DBD += base.dbd
-# List local .dbd files here
-# gemUtil_DBD += xxx.dbd
-
-# Include dbd files for external support modules:
-# gemUtil_DBD += genSubRecord.dbd
+DBD += hb2health.dbd
+hb2health_DBD += geminiRecords.dbd
+hb2health_DBD += hb2healthSubs.dbd
 
 # specify all source files to be compiled
 # including sequencer (.st) source files
-#gemUtil_SRCS += xxx.c
-#gemUtil_SRCS += xxx.st
+hb2health_SRCS += hb2health.c
 
 #=============================
 
