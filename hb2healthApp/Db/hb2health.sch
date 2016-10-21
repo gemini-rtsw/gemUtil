@@ -27,7 +27,7 @@ xform 0 1232 736
 use esirs 834 512 100 0 $(src):Health
 xform 0 848 672
 p 800 672 100 0 1 FTVL:LONG
-p 716 814 100 0 1 SNAM:wsWebHealthSirSub
+p 716 814 100 0 1 SNAM:hb2healthSirSub
 p 752 512 100 1024 0 name:
 p 750 512 100 0 -1 PV:$(top)
 use hwin -256 567 100 0 hwin#1
@@ -45,7 +45,7 @@ p 96 672 100 0 1 FTVA:LONG
 p 96 640 100 0 1 FTVB:LONG
 p 96 608 100 0 1 FTVC:LONG
 p 74 24 100 0 1 SCAN:Passive
-p 51 828 100 0 1 SNAM:wsWebHeartbeatSub
+p 51 828 100 0 1 SNAM:hb2healthHeartbeatSub
 p 112 -32 100 1024 0 name:
 p 49 -34 100 0 -1 PV:$(top)
 use inhier -350 785 100 0 TIMEOUT

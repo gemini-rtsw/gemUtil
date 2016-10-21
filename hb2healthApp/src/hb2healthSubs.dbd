@@ -1,2 +1,2 @@
-function(hb2rhealthSirSub)
+function(hb2healthSirSub)
 function(hb2healthHeartbeatSub)
