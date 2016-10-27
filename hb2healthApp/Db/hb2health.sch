@@ -1,53 +1,58 @@
 [schematic2]
-uniq 5
+uniq 8
 [tools]
 [detail]
-w -304 851 100 0 n#1 inhier.TIMEOUT.P -240 792 -160 792 -160 768 0 768 egenSubA.$(src)Hb2Health.A
-w -112 67 100 0 SLNK inhier.SLNK.P -224 64 0 64 egenSubA.$(src)Hb2Health.SLNK
-w -32 611 100 0 n#2 hwin.hwin#1.in -64 608 0 608 egenSubA.$(src)Hb2Health.INPF
-w -120 739 100 0 HB inhier.HB.P -240 736 0 736 egenSubA.$(src)Hb2Health.INPB
-w 1072 707 100 0 HMSG esirs.$(src)Health.OMSS 1056 704 1088 704 1088 608 1248 608 outhier.HMSG.p
-w 1152 739 100 0 HLTH esirs.$(src)Health.VAL 1056 736 1248 736 outhier.HLTH.p
-w 1072 771 100 0 FLNK esirs.$(src)Health.FLNK 1056 768 1088 768 1088 864 1248 864 outhier.FLNK.p
-w 368 35 100 0 n#3 egenSubA.$(src)Hb2Health.FLNK 288 32 448 32 448 608 640 608 esirs.$(src)Health.SLNK
-w 464 771 100 0 n#4 egenSubA.$(src)Hb2Health.VALA 288 768 640 768 esirs.$(src)Health.INP
+w -412 491 100 0 HB inhier.HB.P -616 488 -208 488 ecalcs.$(src)Hb2Health.INPA
+w 960 235 100 0 HMSG esirs.$(src)Health.OMSS 944 232 976 232 976 136 1136 136 outhier.HMSG.p
+w 1040 267 100 0 HLTH esirs.$(src)Health.VAL 944 264 1136 264 outhier.HLTH.p
+w 960 299 100 0 FLNK esirs.$(src)Health.FLNK 944 296 976 296 976 392 1136 392 outhier.FLNK.p
+w 100 -165 100 0 n#1 elongouts.$(src)OldHb.VAL 48 -168 152 -168 152 -8 -320 -8 -320 456 -208 456 ecalcs.$(src)Hb2Health.INPB
+w -372 -133 100 0 n#0 elongouts.$(src)OldHb.DOL -208 -136 -536 -136 -536 488 junction
+w -436 107 100 0 n#2 inhier.SLNK.P -664 104 -208 104 ecalcs.$(src)Hb2Health.SLNK
+w 136 331 100 0 n#3 ecalcs.$(src)Hb2Health.FLNK 80 328 192 328 192 -48 -360 -48 -360 -168 -208 -168 elongouts.$(src)OldHb.SLNK
+w 32 835 100 0 n#4 ecalcouts.$(src)HbTimer.VAL -24 832 88 832 88 1032 -440 1032 -440 896 -344 896 ecalcouts.$(src)HbTimer.INPA
+w -456 867 100 0 n#5 inhier.TIMEOUT.P -576 864 -336 864 ecalcouts.$(src)HbTimer.INPB
+w 304 299 100 0 n#6 ecalcs.$(src)Hb2Health.VAL 80 296 528 296 esirs.$(src)Health.INP
+w 148 771 100 0 n#7 ecalcouts.$(src)HbTimer.OUT -24 768 320 768 320 392 496 392 hwoutl.hwoutl#1.outp
+s -64 509 100 0 #define HEALTH_GOOD  0
+s -64 485 100 0 #define HEALTH_BAD     2
 [cell use]
 use bb200tr -832 -440 -100 0 frame
 xform 0 448 384
-use inhier -240 23 100 0 SLNK
-xform 0 -224 64
-use inhier -298 732 100 0 HB
-xform 0 -240 736
-use outhier 1216 823 100 0 FLNK
-xform 0 1232 864
-use outhier 1216 567 100 0 HMSG
-xform 0 1232 608
-use outhier 1216 695 100 0 HLTH
-xform 0 1232 736
-use esirs 834 512 100 0 $(src)Health
-xform 0 848 672
-p 800 672 100 0 1 FTVL:LONG
-p 716 814 100 0 1 SNAM:hb2healthSirSub
-p 752 512 100 1024 0 name:
-p 750 512 100 0 -1 PV:$(top)
-use hwin -256 567 100 0 hwin#1
-xform 0 -160 608
-p -448 608 100 0 -1 val(in):$(top)debugLevel
-use egenSubA 133 -34 100 0 $(src)Hb2Health
-xform 0 144 400
-p 96 768 100 0 1 FTA:LONG
-p 96 736 100 0 1 FTB:LONG
-p -223 -283 100 0 0 FTC:LONG
-p 96 704 100 0 0 FTD:LONG
-p -223 -347 100 0 0 FTE:LONG
-p 96 704 100 0 1 FTF:LONG
-p 96 672 100 0 1 FTVA:LONG
-p 96 640 100 0 1 FTVB:LONG
-p 96 608 100 0 1 FTVC:LONG
-p 74 24 100 0 1 SCAN:Passive
-p 51 828 100 0 1 SNAM:hb2healthHeartbeatSub
-p 112 -32 100 1024 0 name:
-p 49 -34 100 0 -1 PV:$(top)
-use inhier -350 785 100 0 TIMEOUT
-xform 0 -240 792
+use inhier -680 63 100 0 SLNK
+xform 0 -664 104
+use inhier -674 484 100 0 HB
+xform 0 -616 488
+use outhier 1104 351 100 0 FLNK
+xform 0 1120 392
+use outhier 1104 95 100 0 HMSG
+xform 0 1120 136
+use outhier 1104 223 100 0 HLTH
+xform 0 1120 264
+use esirs 722 40 100 0 $(src)Health
+xform 0 736 200
+p 688 200 100 0 1 FTVL:LONG
+p 604 342 100 0 1 SNAM:hb2healthSirSub
+p 640 40 100 1024 0 name:
+p 638 40 100 0 -1 PV:$(top)
+use inhier -641 812 100 0 TIMEOUT
+xform 0 -576 864
+use elongouts -82 -265 100 0 $(src)OldHb
+xform 0 -80 -168
+p -166 -265 100 0 -1 PV:$(top)
+p -167 -294 100 0 1 OMSL:closed_loop
+use ecalcs -115 32 100 0 $(src)Hb2Health
+xform 0 -64 280
+p -27 447 100 0 1 CALC:A==B?2:0
+p -199 32 100 0 -1 PV:$(top)
+use ecalcouts -218 699 100 0 $(src)HbTimer
+xform 0 -184 832
+p -258 985 100 0 1 OOPT:Transition To Zero
+p -267 863 100 0 1 CALC:A==B?0:A+1
+p -302 699 100 0 -1 PV:$(top)
+p -280 712 100 0 0 name:$(top)$(I)
+p -263 831 100 0 1 SCAN:1 second
+use hwoutl 496 320 100 0 hwoutl#1
+xform 0 688 368
+p 594 383 100 0 -1 val(outp):$(top)$(src)Health.PROC
 [comments]
