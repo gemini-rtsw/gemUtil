@@ -1,12 +1,12 @@
 [symbol2]
-bbox -192 48 19 256
+bbox -196 48 27 256
 port -58 198 100 0 FLNK symbol 2 0 192 0
 uniq 27
 [tools]
 [attributes]
-p -192 96 100 0 1 seta:dev XXX
-p -192 72 100 0 1 setb:delay 60
-p -192 48 100 0 1 set0:scanres 1 second
+p -192 72 100 0 1 setd:delay 60
+p -192 48 100 0 1 setsr:scanres 1 second
+p -196 94 100 0 1 setdev:dev xxx
 [layers]
 <symbol>
 l 100 0 0 -158 187 Timer

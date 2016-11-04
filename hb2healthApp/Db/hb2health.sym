@@ -1,11 +1,10 @@
 [symbol2]
-bbox -451 32 -93 224
+bbox -443 32 -93 224
 port -429 67 100 0 SLNK symbol 1 -440 64 0
 port -157 68 100 0 FLNK symbol 2 -96 64 0
 port -156 132 100 0 HMSG symbol 2 -96 128 0
 port -157 197 100 0 HLTH symbol 2 -96 192 0
 port -416 164 100 0 HB symbol 1 -440 160 0
-port -416 224 100 1792 TIMEOUT symbol 1 -448 208 0
 uniq 27
 [tools]
 [attributes]
@@ -14,6 +13,7 @@ uniq 27
 l 75 0 0 -250 122 to
 l 75 0 0 -267 89 Health
 l 100 0 0 -292 158 Heartbeat
+l 100 0 0 -304 56 setd:delay 60
 r 0 -320 32 -160 224
 v 0 -440 64
 -320 64
@@ -29,8 +29,5 @@ v 0 -160 128
 _
 v 0 -160 192
 -96 192
-_
-v 0 -320 208
--448 208
 _
 [comments]
