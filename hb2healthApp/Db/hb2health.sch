@@ -12,6 +12,7 @@ w -436 107 100 0 n#2 inhier.SLNK.P -664 104 -208 104 ecalcs.$(src)Hb2Health.SLNK
 w 136 331 100 0 n#3 ecalcs.$(src)Hb2Health.FLNK 80 328 192 328 192 -48 -360 -48 -360 -168 -208 -168 elongouts.$(src)OldHb.SLNK
 w 304 299 100 0 n#4 ecalcs.$(src)Hb2Health.VAL 80 296 528 296 esirs.$(src)Health.INP
 w 148 771 100 0 n#5 timer.timer#2.FLNK -25 768 320 768 320 136 528 136 esirs.$(src)Health.SLNK
+w 58 -126 -100 0 n#5 elongouts.$(src)OldHb.FLNK 48 -136 320 -136 320 136 junction
 s -64 509 100 0 #define HEALTH_GOOD 0
 s -64 485 100 0 #define HEALTH_BAD 2
 [cell use]
