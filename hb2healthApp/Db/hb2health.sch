@@ -40,7 +40,7 @@ p -166 -265 100 0 -1 PV:$(top)
 p -167 -294 100 0 1 OMSL:closed_loop
 use ecalcs -115 32 100 0 $(src)Hb2Health
 xform 0 -64 280
-p -27 447 100 0 1 CALC:A==B?2:0
+p -27 447 100 0 1 CALC:(A=B)?2:0
 p -199 32 100 0 -1 PV:$(top)
 use timer -216 624 100 0 timer#2
 xform 0 -112 728
