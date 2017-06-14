@@ -23,7 +23,7 @@ TEMPLATE_TOP=$(EPICS_BASE)/templates/makeBaseApp/top
 
 PRODSUP=/gem_sw/prod/R3.14.12.4/support
 
-GEMREC=$(PRODSUP)/geminiRec/4-0-4
+GEMREC=$(PRODSUP)/geminiRec/4-1-5
 
 # EPICS_BASE usually appears last so other apps can override stuff:
 EPICS_BASE=/gem_sw/epics/R3.14.12.4/base
