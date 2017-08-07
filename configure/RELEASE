@@ -19,17 +19,14 @@
 # Build settings that are NOT module paths should appear in a
 # CONFIG_SITE file.
 
-#EPICS_RELEASE=R3.14.12.4
 EPICS_RELEASE=R3.14.12.6
-#EPICS_RELEASE=R3.15.5
+
 PROD_SUPP=/gem_sw/prod/$(EPICS_RELEASE)/support
 WORK_SUPP=/gem_sw/work/$(EPICS_RELEASE)/support
-TEST_SUPP=/home/mrippa/work/$(EPICS_RELEASE)/support
 
 TEMPLATE_TOP=$(EPICS_BASE)/templates/makeBaseApp/top
 
-#GEMREC=$(PROD_SUPP)/geminiRec/4-1-5
-GEMREC=$(WORK_SUPP)/geminiRec
+GEMREC=$(PROD_SUPP)/geminiRec/4-1-5-BR314
 
 # EPICS_BASE usually appears last so other apps can override stuff:
 EPICS_BASE=/gem_sw/epics/$(EPICS_RELEASE)/base
