@@ -5,7 +5,6 @@ DIRS := $(DIRS) $(filter-out $(DIRS), configure)
 DIRS += timerApp
 DIRS += hb2healthApp
 DIRS += listAlarmRecordsApp
-DIRS += electricFenceApp
 
 define DIR_template
  $(1)_DEPEND_DIRS = configure
