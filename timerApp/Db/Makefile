@@ -17,7 +17,7 @@ DEPSCHS = $(wildcard ../*.sch)
 
 # Add target .db files below here. Each must
 # correspond to a .sch file
-DB += timer.db
+#DB += timer.db
 
 TEMPLATES_DIR = schematics
 TEMPLATES += timer.sch
