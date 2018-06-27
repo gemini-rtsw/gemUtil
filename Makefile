@@ -6,6 +6,7 @@ DIRS += timerApp
 DIRS += hb2healthApp
 DIRS += listAlarmRecordsApp
 DIRS += initTraceApp
+DIRS += systemTickTest
 
 define DIR_template
  $(1)_DEPEND_DIRS = configure
