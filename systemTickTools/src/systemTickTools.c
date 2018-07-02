@@ -6,6 +6,11 @@
 
 #define MAX_LOOPS 1000
 #define MAX_TIMES 8
+#define SECONDS_TO_MICROSECS 1e6
+
+void systemTickShow() {
+    printf("EPICS Thread Quantum set to %f seconds\n",epicsThreadSleepQuantum());
+}
 
 void systemTickTest()
 {
@@ -15,8 +20,9 @@ void systemTickTest()
     double elapsedTime;
     double sleepTimes[MAX_TIMES] = {0.001, 0.00125, 0.0015, 0.002, 0.0025, 0.005, 0.01, 0.02 };
 
-    printf("EPICS Thread Quantum set to %f\n",epicsThreadSleepQuantum());
+    printf("EPICS Thread Quantum set to %f seconds\n",epicsThreadSleepQuantum());
     for (itime=0; itime<MAX_TIMES; itime++) {
+        int diff_us; /*Difference in microseconds*/
 
         epicsTimeGetCurrent(&startTime);
 
@@ -27,7 +33,11 @@ void systemTickTest()
         }
         epicsTimeGetCurrent(&endTime);
         elapsedTime = epicsTimeDiffInSeconds(&endTime, &startTime);
-        printf("Elapsed time to sleep %d times %f seconds = %f\n", MAX_LOOPS, sleepTimes[itime], elapsedTime);
+        diff_us = (elapsedTime - sleepTimes[itime]*MAX_LOOPS) * SECONDS_TO_MICROSECS;
+
+        printf("Elapsed time to sleep %d times @ %f secs = %f secs [expected %f, diff=%d (us)]\n",
+                MAX_LOOPS, sleepTimes[itime], elapsedTime, sleepTimes[itime]*MAX_LOOPS, diff_us);
+
     }
 
     printf("System Tick Test Finished\n");
@@ -37,11 +47,15 @@ void systemTickTest()
 static const iocshFuncDef systemTickTestDef =
 { "systemTickTest", 0, (const iocshArg *[]) { } };
 
-static void systemTickTestRegistrar(void)
+static const iocshFuncDef systemTickShowDef =
+{ "systemTickShow", 0, (const iocshArg *[]) { } };
+
+static void systemTickToolsRegistrar(void)
 {
     iocshRegister(&systemTickTestDef, systemTickTest);
+    iocshRegister(&systemTickShowDef, systemTickShow);
 }
 
-epicsExportRegistrar(systemTickTestRegistrar);
+epicsExportRegistrar(systemTickToolsRegistrar);
 
 
