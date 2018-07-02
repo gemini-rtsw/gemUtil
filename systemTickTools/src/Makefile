@@ -7,21 +7,21 @@ include $(TOP)/configure/CONFIG
 #=============================
 # Build a support module called <APPNAME>
 
-LIBRARY_IOC += systemTickTest
+LIBRARY_IOC += systemTickTools
 
-# systemTickTest.dbd will be created and installed
-DBD += systemTickTest.dbd
+# systemTickTools.dbd will be created and installed
+DBD += systemTickTools.dbd
 
-# systemTickTest.dbd will be made up from these files:
-systemTickTest_DBD += base.dbd
+# systemTickTools.dbd will be made up from these files:
+systemTickTools_DBD += base.dbd
 # List local .dbd files here
-# systemTickTest_DBD += xxx.dbd
+# systemTickTools_DBD += xxx.dbd
 
 # Include dbd files for external support modules:
-# systemTickTest_DBD += genSubRecord.dbd
+# systemTickTools_DBD += genSubRecord.dbd
 
 # specify all source files to be compiled
-systemTickTest_SRCS += systemTickTest.c
+systemTickTools_SRCS += systemTickTools.c
 
 #=============================
 
