@@ -13,7 +13,6 @@ LIBRARY_IOC += systemTickTools
 DBD += systemTickTools.dbd
 
 # systemTickTools.dbd will be made up from these files:
-systemTickTools_DBD += base.dbd
 # List local .dbd files here
 # systemTickTools_DBD += xxx.dbd
 
