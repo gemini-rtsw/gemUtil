@@ -13,7 +13,6 @@ LIBRARY_IOC += listAlarmRecords
 DBD += listAlarmRecords.dbd
 
 # listAlarmRecords.dbd will be made up from these files:
-listAlarmRecords_DBD += base.dbd
 # List local .dbd files here
 # listAlarmRecords_DBD += xxx.dbd
 

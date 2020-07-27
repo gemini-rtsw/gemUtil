@@ -31,5 +31,5 @@ include $(TOP)/configure/RULES
 #  ADD RULES AFTER THIS LINE
 #
 #
-clean:: 
+clean: 
 	$(RM) *.bak *.dat

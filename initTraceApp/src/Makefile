@@ -13,7 +13,6 @@ LIBRARY_IOC += initTrace
 DBD += initTrace.dbd
 
 # initTrace.dbd will be made up from these files:
-initTrace_DBD += base.dbd
 # List local .dbd files here
 # initTrace_DBD += xxx.dbd
 

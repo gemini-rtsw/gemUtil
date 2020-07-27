@@ -11,7 +11,6 @@ LIBRARY_IOC += hb2health
 
 # <APPNAME>.dbd will be created and installed
 DBD += hb2health.dbd
-hb2health_DBD += base.dbd
 hb2health_DBD += geminiRecords.dbd
 hb2health_DBD += hb2healthSubs.dbd
 
