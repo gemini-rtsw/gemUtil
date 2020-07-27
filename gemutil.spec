@@ -1,5 +1,5 @@
 %define _prefix /gem_base/epics/support
-%define name bancomm
+%define name gemutil
 %define version 3.15.8
 %define release 1.6.13
 %define repository gemdev
