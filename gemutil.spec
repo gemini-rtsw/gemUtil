@@ -28,8 +28,8 @@ Source0: %{name}-%{version}.tar.gz
 ExclusiveArch: %{arch}
 Prefix: %{_prefix}
 ## You may specify dependencies here
-BuildRequires: epics-base-devel re2c gemini-ade psmisc
-Requires: epics-base
+BuildRequires: epics-base-devel re2c gemini-ade geminiRec-devel psmisc
+Requires: epics-base geminiRec
 ## Switch dependency checking off
 # AutoReqProv: no
 
@@ -90,65 +90,3 @@ rm -rf $RPM_BUILD_ROOT
    /%{_prefix}/%{name}/configure
 
 %changelog
-* Sun Jul 26 2020 fkraemer <fkraemer@gemini.edu> 3.15.8-1.6.13.20200726392bd4f
-- new package built with tito
-
-* Thu Jul 23 2020 fkraemer <fkraemer@gemini.edu> 3.15.8-1.6.13.20200723e49c424
-- new package built with tito
-
-* Wed Jul 22 2020 fkraemer <fkraemer@gemini.edu> 3.15.8-2.2.8.20200722f61ed7e
-- finally the right Release tag (fkraemer@gemini.edu)
-
-* Wed Jul 22 2020 fkraemer <fkraemer@gemini.edu> 3.15.8-2.2.8.20200722.git2b87062
-- new package built with tito
-
-* Wed Jul 22 2020 fkraemer <fkraemer@gemini.edu> 3.15.8-2.2.8.1.20200722.gite60436b
-- adapted specfiles Release tag (fkraemer@gemini.edu)
-
-* Wed Jul 22 2020 fkraemer <fkraemer@gemini.edu> 3.15.8-2.2.8.1.20200722
-- bumped specfile (fkraemer@gemini.edu)
-- added sequencer.spec (fkraemer@gemini.edu)
-- added BuildRequirement re2c (fkraemer@gemini.edu)
-
-* Wed Jul 22 2020 fkraemer <fkraemer@gemini.edu>
-- added BuildRequirement re2c (fkraemer@gemini.edu)
-
-* Wed Jul 22 2020 fkraemer <fkraemer@gemini.edu>
-- test
-
-* Wed Jul 22 2020 fkraemer <fkraemer@gemini.edu> 3.15.8-2.2.8.0.20200722
-- changed path back and Requires tag to epics-base(-devel)
-  (fkraemer@gemini.edu)
-- adapted EPICS Path (fkraemer@gemini.edu)
-
-* Wed Jul 22 2020 fkraemer <fkraemer@gemini.edu>
-- changed path back and Requires tag to epics-base(-devel)
-  (fkraemer@gemini.edu)
-- adapted EPICS Path (fkraemer@gemini.edu)
-
-* Wed Jul 22 2020 fkraemer <fkraemer@gemini.edu> 3.15.8-2.2.8.20200722
-- adapted Release token (fkraemer@gemini.edu)
-- corrected EPICS_BASE in config/RELEASE (fkraemer@gemini.edu)
-
-* Fri Jul 17 2020 fkraemer <fkraemer@gemini.edu> 3.15.8-2.2.8.20200717gite6b33fb
-- corrected EPICS_BASE in config/RELEASE
-
-* Wed Jul 15 2020 Matt Rippa <mrippa@gemini.edu> 3.15.8-2.2.8.20200715gite29f3d3
-- New epics path and tito releaser tests. (mrippa@gemini.edu)
-
-* Mon Jul 13 2020 Matt Rippa <mrippa@gemini.edu> 3.15.8-2.2.8.20200713gitc7b4fa2
-- Added epics-base to requires (mrippa@gemini.edu)
-- Added .tito/releasers.conf (mrippa@gemini.edu)
-
-* Fri Jul 10 2020 Matt Rippa <mrippa@gemini.edu> 3.15.8-2.2.8.20200710git5c91c94
-- First successful tito build --rpm (mrippa@gemini.edu)
-
-* Fri Jul 10 2020 Matt Rippa <mrippa@gemini.edu> 3.15.8-2.2.8.20200710gitaf3c52b
-- new package built with tito
-
-* Fri Mar 9 2012 Mathew Rippa <mrippa@gemini.edu> 2.1.13-0
-- r3.14.12.2, rpmlint compliant
-* Mon Feb 11 2008 Felix Kraemer <fkraemer@gemini.edu> 2.0.11-0
-- changes to be compliant with EPICS build mechanism
-* Wed Dec 19 2007 Felix Kraemer <fkraemer@gemini.edu> 2.0.11-0
-- initial release
