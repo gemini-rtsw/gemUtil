@@ -28,7 +28,7 @@ Source0: %{name}-%{version}.tar.gz
 ExclusiveArch: %{arch}
 Prefix: %{_prefix}
 ## You may specify dependencies here
-BuildRequires: epics-base-devel re2c gemini-ade geminiRec-devel psmisc
+BuildRequires: epics-base-devel re2c geminiRec-devel tdct
 Requires: epics-base geminiRec
 ## Switch dependency checking off
 # AutoReqProv: no
@@ -40,7 +40,7 @@ This is the module %{name}.
 %package devel
 Summary: %{name}-devel Package
 Group: Development/Gemini
-Requires: %{name}
+Requires: %{name} epics-base-devel geminiRec-devel tdct
 %description devel
 This is the module %{name}.
 
@@ -51,17 +51,19 @@ This is the module %{name}.
 #update environment from former rpm installations due to BuildRequires
 source /gem_base/etc/profile
 #start virtual framebuffer to have graphics for java
-Xvfb :1  -ac -nolisten tcp -nolisten unix &
+#Xvfb :1  -ac -nolisten tcp -nolisten unix &
 
 make distclean uninstall
-DISPLAY=:1 make
-killall Xvfb
+#DISPLAY=:1 make
+make
+#killall Xvfb
 
 %install
 export DONT_STRIP=1
 rm -rf $RPM_BUILD_ROOT
 mkdir -p $RPM_BUILD_ROOT/%{_prefix}/%{name}
 cp -r dbd $RPM_BUILD_ROOT/%{_prefix}/%{name}
+cp -r db $RPM_BUILD_ROOT/%{_prefix}/%{name}
 # cp -r bin $RPM_BUILD_ROOT/%{_prefix}/%{name}
 cp -r lib $RPM_BUILD_ROOT/%{_prefix}/%{name}
 # cp -r include $RPM_BUILD_ROOT/%{_prefix}/%{name}
@@ -85,6 +87,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files devel
 %defattr(-,root,root)
+   /%{_prefix}/%{name}/db
    /%{_prefix}/%{name}/dbd
 #   /%{_prefix}/%{name}/include
    /%{_prefix}/%{name}/configure
