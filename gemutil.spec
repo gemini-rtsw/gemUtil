@@ -93,6 +93,9 @@ rm -rf $RPM_BUILD_ROOT
    /%{_prefix}/%{name}/configure
 
 %changelog
+* Wed Jul 29 2020 fkraemer <fkraemer@gemini.edu> 3.15.8-1.6.13.202007290488136
+- removed db to be copied, not existing (fkraemer@gemini.edu)
+
 * Wed Jul 29 2020 fkraemer <fkraemer@gemini.edu> 3.15.8-1.6.13.202007295e567d8
 - changed dependecies in specfile (fkraemer@gemini.edu)
 
