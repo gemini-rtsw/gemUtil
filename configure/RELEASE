@@ -22,10 +22,13 @@
 #EPICS_RELEASE = $(shell echo "${GEM_EPICS_RELEASE}")
 
 PROD_SUPP=/gem_base/epics/support
+WORK_SUPP=/gem_base/epics/support
 
 TEMPLATE_TOP=$(EPICS_BASE)/templates/makeBaseApp/top
 
 GEMREC=$(PROD_SUPP)/geminiRec
+
+#GEMREC=$(WORK_SUPP)/geminiRec
 
 # EPICS_BASE usually appears last so other apps can override stuff:
 EPICS_BASE=/gem_base/epics/epics-base
