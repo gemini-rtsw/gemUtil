@@ -12,3 +12,4 @@ templates/
 cdCommands
 envPaths
 dllPath.bat
+/configure/RELEASE.local
