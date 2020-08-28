@@ -93,6 +93,13 @@ rm -rf $RPM_BUILD_ROOT
    /%{_prefix}/%{name}/configure
 
 %changelog
+* Fri Aug 28 2020 Felix Kraemer <fkraemer@gemini.edu> 3.15.8-1.6.13.2020082818227394909
+- Adjustments to include configure/RELEASE.local in configure/RELEASE to
+  overwrite configuration this way (fkraemer@gemini.edu)
+- Added .dbd support to be used by IOCs (iarriagada@gemini.edu)
+- Release tag enriched with hour and minute (%%H%%M) to be able to build
+  several RPMs a day without messing up the repo (fkraemer@gemini.edu)
+
 * Wed Jul 29 2020 fkraemer <fkraemer@gemini.edu> 3.15.8-1.6.13.202007290488136
 - removed db to be copied, not existing (fkraemer@gemini.edu)
 
