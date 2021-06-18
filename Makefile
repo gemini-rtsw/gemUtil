@@ -7,6 +7,7 @@ DIRS += hb2healthApp
 DIRS += listAlarmRecordsApp
 DIRS += initTraceApp
 DIRS += systemTickTools
+DIRS += netConfigApp
 
 define DIR_template
  $(1)_DEPEND_DIRS = configure
