@@ -13,3 +13,4 @@ cdCommands
 envPaths
 dllPath.bat
 /configure/RELEASE.local
+/configure/CONFIG_SITE.local

@@ -34,3 +34,10 @@ CROSS_COMPILER_TARGET_ARCHS = RTEMS-beatnik RTEMS-mvme2307 RTEMS-mvme3100
 #IOCS_APPL_TOP = </IOC/path/to/application/top>
 #
 EPICS_RELEASE = $(shell echo "${GEM_EPICS_RELEASE}")
+
+# These allow developers to override the CONFIG_SITE variable
+# settings without having to modify the configure/CONFIG_SITE
+# file itself.
+-include $(TOP)/../CONFIG_SITE.local
+-include $(TOP)/../configure/CONFIG_SITE.local
+-include $(TOP)/configure/CONFIG_SITE.local
