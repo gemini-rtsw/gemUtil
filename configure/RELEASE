@@ -25,8 +25,8 @@ PROD_SUPP=/gem_base/epics/support
 
 TEMPLATE_TOP=$(EPICS_BASE)/templates/makeBaseApp/top
 
-#GEMREC=$(PROD_SUPP)/geminiRec
-GEMREC=/home/framos/work/geminiRec_branch
+GEMREC=$(PROD_SUPP)/geminiRec
+#GEMREC=/home/framos/work/geminiRec_branch
 
 # EPICS_BASE usually appears last so other apps can override stuff:
 EPICS_BASE=/gem_base/epics/epics-base
