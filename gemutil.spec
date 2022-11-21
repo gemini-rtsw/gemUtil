@@ -66,6 +66,7 @@ cp -r dbd $RPM_BUILD_ROOT/%{_prefix}/%{name}
 cp -r lib $RPM_BUILD_ROOT/%{_prefix}/%{name}
 # cp -r include $RPM_BUILD_ROOT/%{_prefix}/%{name}
 cp -r configure $RPM_BUILD_ROOT/%{_prefix}/%{name}
+cp -r templates $RPM_BUILD_ROOT/%{_prefix}/%{name}
 # find $RPM_BUILD_ROOT/%{_prefix}/%{name}/configure -name ".git" -exec rm -rf {} \;
 
 
