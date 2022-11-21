@@ -86,6 +86,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(-,root,root)
    /%{_prefix}/%{name}/dbd
    /%{_prefix}/%{name}/configure
+   /%{_prefix}/%{name}/templates
 
 %changelog
 * Thu Oct 08 2020 fkraemer <fkraemer@gemini.edu> 1.6.13-2
