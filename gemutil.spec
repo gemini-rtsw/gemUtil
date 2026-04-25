@@ -18,7 +18,7 @@
 
 Summary: %{name} Package, a module for EPICS base
 Name: %{name}
-Version: 1.6.13
+Version: 1.6.14
 Release: 0%{?dist}
 License: EPICS Open License
 Group: Applications/Engineering
@@ -90,6 +90,9 @@ rm -rf $RPM_BUILD_ROOT
    /%{_prefix}/%{name}/templates
 
 %changelog
+* Sat Apr 25 2026 Matt Rippa <matt.rippa@noirlab.edu> 1.6.14-0
+- RTEMS-858: Start gemUtil 1.6.14 branch baseline
+
 * Sat Apr 25 2026 Matt Rippa <matt.rippa@noirlab.edu> 1.6.13-0
 - RTEMS-858: Start gemUtil 1.6.13 branch baseline
 
