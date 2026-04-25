@@ -19,7 +19,7 @@
 Summary: %{name} Package, a module for EPICS base
 Name: %{name}
 Version: 1.6.13
-Release: 2%{?dist}
+Release: 0%{?dist}
 License: EPICS Open License
 Group: Applications/Engineering
 Source0: %{name}-%{version}.tar.gz
@@ -90,6 +90,9 @@ rm -rf $RPM_BUILD_ROOT
    /%{_prefix}/%{name}/templates
 
 %changelog
+* Sat Apr 25 2026 Matt Rippa <matt.rippa@noirlab.edu> 1.6.13-0
+- RTEMS-858: Start gemUtil 1.6.13 branch baseline
+
 * Thu Oct 08 2020 fkraemer <fkraemer@gemini.edu> 1.6.13-2
 - applied new verssion/release scheme and new yum repository structure
 - small adjustment in specfile
@@ -112,4 +115,3 @@ rm -rf $RPM_BUILD_ROOT
 
 * Sun Jul 26 2020 fkraemer <fkraemer@gemini.edu> 3.15.8-1.6.13.20200726ab53b02
 - new package built with tito
-
